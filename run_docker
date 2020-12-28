@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+mkdir -p dist_rpi
+docker run nimpi
+container=$(docker ps -alq)
+docker cp $container:/nimpi/dist_rpi/nimpi dist_rpi/
